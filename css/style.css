@@ -69,7 +69,7 @@ main header nav .btn-container button {
 }
 main header nav .btn-container button:nth-child(1) {
   padding: 0.8vw 1.5vw;
-  border: 2px solid var(--theme);
+  border: 0.5px solid var(--theme);
   background-color: rgba(0, 0, 0, 0);
   color: var(--theme);
   border-radius: var(--border-radius);
@@ -84,7 +84,7 @@ main header nav .btn-container button:nth-child(1):hover {
 }
 main header nav .btn-container button:nth-child(2) {
   padding: 0.8vw 1.5vw;
-  border: 2px solid var(--theme);
+  border: 0.5px solid var(--theme);
   background-color: var(--theme);
   color: var(--n-white);
   border-radius: var(--border-radius);
@@ -126,7 +126,7 @@ main .section1 .about-details button {
 }
 main .section1 .about-details button:nth-child(2) {
   padding: 1vw 2vw;
-  border: 2px solid var(--theme);
+  border: 0.5px solid var(--theme);
   background-color: rgba(0, 0, 0, 0);
   color: var(--theme);
   border-radius: var(--border-radius);
@@ -141,7 +141,7 @@ main .section1 .about-details button:nth-child(2):hover {
 }
 main .section1 .about-details button:nth-child(3) {
   padding: 1vw 2vw;
-  border: 2px solid var(--theme);
+  border: 0.5px solid var(--theme);
   background-color: var(--theme);
   color: var(--n-white);
   border-radius: var(--border-radius);
@@ -168,4 +168,76 @@ main .section1 .img-con {
   gap: 0;
   background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070");
   background-size: cover;
+}
+main .section2 {
+  padding: 7vw 2vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+main .section2 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 5vw;
+}
+main .section2 .card h1 {
+  font-size: 4vw;
+  font-weight: 200;
+}
+main .section2 .card span {
+  font-size: 1vw;
+  font-weight: 200;
+  color: var(--n-white);
+  text-align: center;
+}
+main .section3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "button button img img" "button button img img" "about-data about-data img img" "about-data about-data img img";
+  grid-gap: 1vw;
+  padding: 3vw 5vw;
+}
+main .section3 button {
+  grid-area: button;
+  padding: 0.8vw 4vw;
+  border: 0.5px solid var(--theme);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--theme);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1vmax;
+  transition: var(--animation-smooth);
+  font-weight: 400;
+}
+main .section3 button:hover {
+  background-color: var(--theme);
+  color: var(--n-white);
+}
+main .section3 .about-data {
+  grid-area: about-data;
+  align-self: center;
+}
+main .section3 .about-data h1 {
+  font-size: 3vw;
+  font-weight: 300;
+  margin-bottom: 1.5vw;
+}
+main .section3 .about-data p {
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+main .section3 .img {
+  grid-area: img;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687");
+  background-size: cover;
+  background-position: top;
+  border-radius: 1vw;
 }/*# sourceMappingURL=style.css.map */
