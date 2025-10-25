@@ -581,6 +581,18 @@
             </div>
         </footer>
     </main>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis({ autoRaf: true });
+        lenis.on("scroll", console.log);
+
+        // Initialize GSAP
+        gsap.registerPlugin(TextPlugin);
+
+
+    </script>
 </body>
 
 </html>
