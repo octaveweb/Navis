@@ -1,0 +1,16 @@
+@mixin button-style($bg-color: var(--theme), $color: var(--n-white), $border: var(--border), $border-radius: var(--border-radius), $h-color: var(--n-black), $h-bg-color: var(--n-white), $padding: .8vw 1.5vw) {
+    padding: $padding;
+    border: .1px solid $border;
+    background-color: $bg-color;
+    color: $color;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1vmax;
+    transition: var(--animation-smooth);
+    font-weight: 400;
+
+    &:hover {
+        background-color: $h-bg-color;
+        color: $h-color;
+    }
+}

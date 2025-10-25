@@ -226,7 +226,7 @@ header .btn-container button:nth-child(2):hover {
 }
 .section2 .card h1 {
   font-size: 4vw;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--black);
   margin-bottom: 1vw;
 }
@@ -346,8 +346,8 @@ header .btn-container button:nth-child(2):hover {
   gap: 2vw;
 }
 .section4 .bottom-section .card {
-  height: 28vw;
-  width: 20vw;
+  height: 25rem;
+  width: 21vw;
   background-color: #dadada;
   position: relative;
   border-radius: 1vw;
@@ -533,10 +533,6 @@ header .btn-container button:nth-child(2):hover {
   margin: 1vw 0;
   color: var(--black);
 }
-.section5 .bottom-section .testimonial .work .disabled .expand {
-  padding-bottom: 10vw;
-  transition: height 0s, var(--animation-primary);
-}
 .section5 .bottom-section .testimonial .work h3:hover + .expand {
   padding-bottom: 7vw;
   transition: height 0s, var(--animation-primary);
@@ -606,7 +602,7 @@ header .btn-container button:nth-child(2):hover {
 .section6 .img {
   background-image: url(https://images.unsplash.com/photo-1600714741703-a41f1220f681?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   border-radius: 1vw;
 }

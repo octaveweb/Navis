@@ -1,3 +1,5 @@
+@import '/css/button';
+@import '/css/flex';
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
@@ -65,30 +67,6 @@ body {
     width: 0vw;
 }
 
-@mixin button-style($bg-color: var(--theme), $color: var(--n-white), $border: var(--border), $border-radius: var(--border-radius), $h-color: var(--n-black), $h-bg-color: var(--n-white), $padding: .8vw 1.5vw) {
-    padding: $padding;
-    border: .1px solid $border;
-    background-color: $bg-color;
-    color: $color;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-size: 1vmax;
-    transition: var(--animation-smooth);
-    font-weight: 400;
-
-    &:hover {
-        background-color: $h-bg-color;
-        color: $h-color;
-    }
-}
-
-@mixin flex-center($flex-direction: row, $justify-content: center, $align-items: center, $gap: 0) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    gap: $gap;
-}
 
 
 header {
@@ -246,7 +224,7 @@ header {
 
         h1 {
             font-size: 4vw;
-            font-weight: 200;
+            font-weight: 400;
             color: var(--black);
             margin-bottom: 1vw;
         }
@@ -365,8 +343,8 @@ header {
         gap: 2vw;
 
         .card {
-            height: 28vw;
-            width: 20vw;
+            height: 25rem;
+            width: 21vw;
             background-color: #dadada;
             position: relative;
             border-radius: 1vw;
@@ -570,13 +548,6 @@ header {
                     color: var(--black);
                 }
 
-                .disabled .expand {
-                    // height: 7vw;
-                    padding-bottom: 10vw;
-                    // overflow: hidden;
-                    transition: height 0s, var(--animation-primary);
-
-                }
 
                 h3:hover+.expand {
                     padding-bottom: 7vw;
@@ -676,9 +647,10 @@ header {
     .img {
         background-image: url(https://images.unsplash.com/photo-1600714741703-a41f1220f681?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171    );
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top;
         background-size: cover;
-        border-radius: 1vw
+        border-radius: 1vw;
+        
     }
 
 
@@ -759,151 +731,157 @@ header {
 footer {
     padding: 1vw;
     background: var(--white);
-.contener{
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-        "d1 d2 d3 d4"
-        "d1 d2 d3 d4"
-        "d5 d5 d5 d5";
-    background-color: #232323;
-    padding: 3vw 4vw;
-    border-radius: 1vw;
-    div:nth-child(1) {
-        grid-area: d1;
 
-        .logo {
-            font-size: 2.5vmax;
-            justify-self: start;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
+    .contener {
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "d1 d2 d3 d4"
+            "d1 d2 d3 d4"
+            "d5 d5 d5 d5";
+        background-color: #232323;
+        padding: 3vw 4vw;
+        border-radius: 1vw;
 
-            img {
-                height: 4.5vw;
-            }
+        div:nth-child(1) {
+            grid-area: d1;
 
-            span {
-                margin-left: 0vw;
-                font-weight: 500;
-                color: var(--n-white);
-            }
-        }
-
-        h3 {
-            font-size: 1.5vw;
-            font-weight: 400;
-            padding: 1vw 0vw 1vw 1vw;
-            color: var(--n-white);
-        }
-
-        .input {
-
-            padding-left: 1vw;
-
-            input {
-                @include button-style(var(--n-white), var(--n-black), var(--n-white), 25px, var(--n-white), var(--n-white), .8vw 4vw);
-                outline: none
-            }
-
-            button {
-                @include button-style(var(--theme), var(--n-white), var(--theme), 25px, var(--n-white), var(--theme), .8vw 4vw);
-            }
-        }
-
-    }
-
-    div:nth-child(2) {
-        grid-area: d2;
-    }
-
-    div:nth-child(3) {
-        grid-area: d3;
-    }
-
-    div:nth-child(4) {
-        grid-area: d4;
-    }
-
-    div:nth-child(5) {
-        grid-area: d5;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1vw;
-        color: var(--n-white);
-        p{
-            span{
-                margin: 0 .3vw;
-            }
-        }
-         h2{
-                font-size:  1vw;
-                font-weight: 200;
-            }
-        .bottom {
-            align-self: end;
-            p {
-                color: var(--text);
-                font-size: 1.2vw;
-                padding: 1.5vw 0;
-                opacity: 50%;
-            }
-           
-            .socal-media {
-                height: 100%;
-                width: 100%;
+            .logo {
+                font-size: 2.5vmax;
+                justify-self: start;
                 display: flex;
                 align-items: center;
-                gap: 1vw;
+                cursor: pointer;
 
-                .icon {
-                    @include button-style(#00000000, var(--n-white), var(--text), 25px, var(--white), #fffffff9);
-                    padding: 0 0;
-                    font-size: 1.1vmax;
+                img {
+                    height: 4.5vw;
+                }
+
+                span {
+                    margin-left: 0vw;
+                    font-weight: 500;
+                    color: var(--n-white);
                 }
             }
-        }
 
-    }
-
-    div:nth-child(2),
-    div:nth-child(3),
-    div:nth-child(4) {
-        padding: 2vw;
-        justify-items: end;
-    }
-
-    div:nth-child(2) ul,
-    div:nth-child(3) ul,
-    div:nth-child(4) ul {
-        display: flex;
-        flex-direction: column;
-        gap: .5vw;
-    }
-
-    div {
-
-        ul {
-            list-style-type: none;
-
-            li:nth-child(1) {
+            h3 {
                 font-size: 1.5vw;
-                opacity: 100%;
-                font-weight: 300;
+                font-weight: 400;
+                padding: 1vw 0vw 1vw 1vw;
+                color: var(--n-white);
             }
 
-            li {
-                color: var(--n-white);
-                opacity: 50%;
-                font-weight: 200;
-                cursor: pointer;
+            .input {
+
+                padding-left: 1vw;
+
+                input {
+                    @include button-style(var(--n-white), var(--n-black), var(--n-white), 25px, var(--n-white), var(--n-white), .8vw 4vw);
+                    outline: none
+                }
+
+                button {
+                    @include button-style(var(--theme), var(--n-white), var(--theme), 25px, var(--n-white), var(--theme), .8vw 4vw);
+                }
             }
+
         }
 
+        div:nth-child(2) {
+            grid-area: d2;
+        }
+
+        div:nth-child(3) {
+            grid-area: d3;
+        }
+
+        div:nth-child(4) {
+            grid-area: d4;
+        }
+
+        div:nth-child(5) {
+            grid-area: d5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1vw;
+            color: var(--n-white);
+
+            p {
+                span {
+                    margin: 0 .3vw;
+                }
+            }
+
+            h2 {
+                font-size: 1vw;
+                font-weight: 200;
+            }
+
+            .bottom {
+                align-self: end;
+
+                p {
+                    color: var(--text);
+                    font-size: 1.2vw;
+                    padding: 1.5vw 0;
+                    opacity: 50%;
+                }
+
+                .socal-media {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 1vw;
+
+                    .icon {
+                        @include button-style(#00000000, var(--n-white), var(--text), 25px, var(--white), #fffffff9);
+                        padding: 0 0;
+                        font-size: 1.1vmax;
+                    }
+                }
+            }
+
+        }
+
+        div:nth-child(2),
+        div:nth-child(3),
+        div:nth-child(4) {
+            padding: 2vw;
+            justify-items: end;
+        }
+
+        div:nth-child(2) ul,
+        div:nth-child(3) ul,
+        div:nth-child(4) ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5vw;
+        }
+
+        div {
+
+            ul {
+                list-style-type: none;
+
+                li:nth-child(1) {
+                    font-size: 1.5vw;
+                    opacity: 100%;
+                    font-weight: 300;
+                }
+
+                li {
+                    color: var(--n-white);
+                    opacity: 50%;
+                    font-weight: 200;
+                    cursor: pointer;
+                }
+            }
+
+        }
     }
-}
 }
 
 // Class
