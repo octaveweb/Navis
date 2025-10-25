@@ -89,7 +89,7 @@
     font-size: 1vmax;
     transition: var(--animation-smooth);
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 0.8em;
   }
   .section1 .about-details button:nth-child(2):hover {
     background-color: var(--theme);
@@ -105,7 +105,7 @@
     font-size: 1vmax;
     transition: var(--animation-smooth);
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .section1 .about-details button:nth-child(3):hover {
     background-color: rgba(0, 0, 0, 0);

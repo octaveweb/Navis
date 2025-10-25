@@ -84,12 +84,12 @@
 
             button:nth-child(2) {
                 @include button-style(#00000000, var(--theme), var(--theme), 100vw, var(--n-white), var(--theme), 2vw 4vw);
-                font-size: 1.2rem;
+                font-size: .8em;
             }
 
             button:nth-child(3) {
                 @include button-style(var(--theme), var(--n-white), var(--theme), 100vw, var(--theme), #00000000, 2vw 4vw);
-                font-size: 1.2rem;
+                font-size: .8rem;
             }
 
         }
