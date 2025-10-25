@@ -139,7 +139,7 @@
     font-weight: 400;
   }
   .section2 .card span {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     font-size: 0.8rem;
     opacity: 80%;
   }
@@ -529,13 +529,12 @@
     background: var(--white);
   }
   footer .contener {
-    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr) 0.1fr;
     grid-template-areas: "d1 d1" "d2 d2" "d3 d3" "d4 d4" "d5 d5";
     background-color: #232323;
-    padding: 1vw 4vw;
+    padding: 4vw;
     border-radius: 1vw;
     place-items: start;
   }
@@ -561,6 +560,10 @@
     color: var(--n-white);
   }
   footer .contener div:nth-child(1) .input {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 0.2rem;
     padding-left: 1vw;
   }
   footer .contener div:nth-child(1) .input input {
@@ -628,6 +631,7 @@
   footer .contener div:nth-child(5) h2 {
     font-size: 0.8rem;
     font-weight: 200;
+    display: none;
   }
   footer .contener div:nth-child(5) .bottom {
     align-self: end;

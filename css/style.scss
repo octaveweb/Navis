@@ -13,7 +13,8 @@
 html,
 body {
     height: 100%;
-    width: 100%;
+    width: 100%;  
+     background-color: var(--white);;
 }
 
 :root {
@@ -41,7 +42,7 @@ body {
     --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
 
     --border: 1px solid var(--n-black);
-    --border-radius: 5vw;
+    --border-radius: 10rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -719,9 +720,10 @@ header {
                 gap: 1vw;
 
                 .icon {
-                    @include button-style(#00000000, var(--black), var(--text), 25px, var(--white), var(--black));
+                    @include button-style(#00000000, var(--black), var(--text), 10rem, var(--white), var(--black));
                     padding: 0 0;
                     font-size: 1.1vmax;
+                    border-radius: 50%;
                 }
             }
         }
@@ -770,6 +772,8 @@ footer {
                 font-weight: 400;
                 padding: 1vw 0vw 1vw 1vw;
                 color: var(--n-white);
+                    opacity: 80%;
+
             }
 
             .input {
